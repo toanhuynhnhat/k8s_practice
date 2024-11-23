@@ -44,7 +44,7 @@ def IMDB_batch():
             response = requests.get(url, stream=True)
             with open(f"/tmp/{title}", mode="wb") as file:
                 file.write(response.content)
-            s3.upload_file(f"/tmp/{title}", "bdok-539445819060", f"landing/imdb/{title}")
+            s3.upload_file(f"/tmp/{title}", "bdok-961341512059", f"landing/imdb/{title}")
         
         return True
     
